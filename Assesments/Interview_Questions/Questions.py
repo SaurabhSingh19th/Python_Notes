@@ -1857,6 +1857,21 @@ import re
 # word = "AAAAaaccYYY"
 # o/p : ['Y3', 'c2', 'A4', 'a2']
 
+# Previous Method
+char_count = 1
+pre = word[0]
+out = ""
+for i in range(1, len(word)):
+    if word[i] == pre:
+        char_count += 1
+    else:
+        out += pre + str(char_count)
+        char_count = 1
+        pre = word[i]
+out += pre + str(char_count)
+print(out)
+
+# Forward Method
 
 """ 125 What is the output of the below function call """
 
